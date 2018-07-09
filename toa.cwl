@@ -55,3 +55,11 @@ s:author:
     s:email: therese.cantwell@manchester.ac.uk
     s:name: Therese Cantwell
 
+
+$namespaces:
+  s: https://schema.org/
+
+$schemas:
+ - https://schema.org/docs/schema_org_rdfa.html
+
+

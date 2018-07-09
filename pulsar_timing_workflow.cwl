@@ -38,3 +38,17 @@ steps:
       scrunched_pulsar_fits_file: scrunch_data/step_1_out
       output_file_name: output_toa_file_name
     out: [toa_file]
+
+
+s:author:
+  - class: s:Person
+    s:identifier: https://orcid.org/0000-0001-9159-6599
+    s:email: therese.cantwell@manchester.ac.uk
+    s:name: Therese Cantwell
+
+
+$namespaces:
+  s: https://schema.org/
+
+$schemas:
+ - https://schema.org/docs/schema_org_rdfa.html
