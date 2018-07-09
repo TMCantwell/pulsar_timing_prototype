@@ -25,8 +25,8 @@ inputs:
       prefix: -e
   pulsar_ephemeris:
     type: File
-    inputBinding:
     format: tempo2
+    inputBinding:
       position: 4
       prefix: -E
   pulsar_fits_file:
