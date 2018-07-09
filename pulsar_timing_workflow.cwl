@@ -15,7 +15,7 @@ inputs:
 outputs:
   classout:
     type: File
-    outputSource: calculate_toa/toa
+    outputSource: calculate_toa/toa_file
 
 steps:
   scrunch_data:
@@ -37,3 +37,4 @@ steps:
       output_format: toa_file_format
       scrunched_pulsar_fits_file: scrunch_data/step_1_out
       output_file_name: output_toa_file_name
+    out: [toa_file]
