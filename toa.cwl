@@ -8,7 +8,7 @@ label: Calculate time of arrival
 doc: Note this workflow uses the singularity image found at https://www.singularity-hub.org/collections/882.
 
 baseCommand: [singularity, exec]
-stdout: toa_test.txt
+stdout: $(inputs.output_filename)
 
 requirements:
   InitialWorkDirRequirement:
@@ -39,7 +39,8 @@ inputs:
     inputBinding:
       position: 5
       valueFrom: $(self.basename)
-
+  output_filename:
+    type: string
 
 outputs:
   toa:
