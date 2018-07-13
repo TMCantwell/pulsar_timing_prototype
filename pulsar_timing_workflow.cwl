@@ -13,10 +13,12 @@ inputs:
   output_toa_file_name: string
 
 outputs:
-  classout:
+  toa:
     type: File
     outputSource: calculate_toa/toa
-
+  scrunched_fits_file: 
+    type: File
+    outputSource: scrunch_data/scrunched_data
 steps:
   scrunch_data:
     run: scrunch.cwl
@@ -36,7 +38,7 @@ steps:
       pulse_profile: input_pulse_profile
       output_format: toa_file_format
       scrunched_pulsar_fits_file: scrunch_data/scrunched_data
-      stdout: output_toa_file_name
+      output_filename: output_toa_file_name
     out: [toa]
 
 
