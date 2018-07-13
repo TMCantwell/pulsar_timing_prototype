@@ -8,10 +8,16 @@ label: Calculate time of arrival
 doc: Note this workflow uses the singularity image found at https://www.singularity-hub.org/collections/882.
 
 baseCommand: [singularity, exec]
+stdout: toa_test.txt
+
+requirements:
+  InitialWorkDirRequirement:
+    listing:
+      - $(inputs.scrunched_pulsar_fits_file)
+
 inputs:
   singularity_image:
     type: File
-    format: simg
     inputBinding:
       position: 1
   pulsar_tool:
@@ -20,7 +26,6 @@ inputs:
       position: 2
   pulse_profile:
     type: File
-    format: std
     inputBinding:
       position: 3
       prefix: -s
@@ -31,23 +36,14 @@ inputs:
       prefix: -f
   scrunched_pulsar_fits_file:
     type: File
-    format: PSRFITS
     inputBinding:
       position: 5
-  output_file_name:
-    type: File
-    format: text file
-    inputBinding:
-      position: 6
-      prefix: >
+      valueFrom: $(self.basename)
 
 
 outputs:
   toa:
-    type: File
-    format: text file
-    outputBinding:
-      glob: $(output_file_name)
+    type: stdout
 
 s:author:
   - class: s:Person

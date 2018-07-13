@@ -15,7 +15,7 @@ inputs:
 outputs:
   classout:
     type: File
-    outputSource: calculate_toa/toa_file
+    outputSource: calculate_toa/toa
 
 steps:
   scrunch_data:
@@ -26,7 +26,7 @@ steps:
       output_file_extension: scrunch_extension
       pulsar_ephemeris: new_ephemeris
       pulsar_fits_file: input_fits
-    out: [step_1_out]
+    out: [scrunched_data]
 
   calculate_toa:
     run: toa.cwl
@@ -35,9 +35,9 @@ steps:
       pulsar_tool: toa_tool
       pulse_profile: input_pulse_profile
       output_format: toa_file_format
-      scrunched_pulsar_fits_file: scrunch_data/step_1_out
-      output_file_name: output_toa_file_name
-    out: [toa_file]
+      scrunched_pulsar_fits_file: scrunch_data/scrunched_data
+      stdout: output_toa_file_name
+    out: [toa]
 
 
 s:author:

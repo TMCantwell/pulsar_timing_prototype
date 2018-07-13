@@ -1,0 +1,17 @@
+singularity_image:
+  class: File
+  path: pulsar-v1.1.simg
+
+pulsar_tool: -FT
+
+output_file_extension: FT
+
+#output_dir: /home/vagrant/pulsar_pipeline/CWL
+
+pulsar_ephemeris:
+  class: File
+  path: J1911+37_t2.par
+
+pulsar_fits_file:
+  class: File
+  path: GBNCC_J1911_37_period.fits

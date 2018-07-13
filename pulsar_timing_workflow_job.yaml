@@ -1,6 +1,6 @@
 sing_image:
   class: File
-  path: /home/vagrant/Gridpp/Pulsar/pulsar-v1.1.simg
+  path: pulsar-v1.1.simg
 
 scrunch_tool: pam -FT
 
@@ -8,17 +8,17 @@ scrunch_extension: FT
 
 new_ephemeris:
   class: File
-  path: /home/vagrant/pulsar_pipeline/J1911+37_t2.par
+  path: J1911+37_t2.par
 
 input_fits:
   class: File
-  path: /home/vagrant/pulsar_pipeline/GBNCC_J1911+37_period.fits
+  path: GBNCC_J1911_37_period.fits
 
 toa_tool: pat
 
 input_pulse_profile:
   class: File
-  path: /home/vagrant/pulsar_pipeline/1911+37_820MHz.std
+  path: 1911+37_820MHz.std
 
 toa_file_format: tempo2
 
